@@ -4,7 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
+/* left part of dashboard*/
 .logo {
 	position: absolute;
 	top: 1vh;
@@ -56,4 +56,16 @@ body {
 	width: 80%;
 	height: 1px;
 	margin-bottom: 5vw;
+}
+
+/* right part of dashboard */
+.right-rectangle {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 20vw;
+	height: 100%;
+	background: rgba(8, 78, 212, 0.2);
+	display: flex;
+	flex-direction: column;
 }
