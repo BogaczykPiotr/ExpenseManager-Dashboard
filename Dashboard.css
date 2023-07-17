@@ -58,6 +58,19 @@ body {
 	margin-bottom: 5vw;
 }
 
+.actual-page::before {
+	content: '';
+	position: absolute;
+	top: 2vw;
+	left: 6vw;
+	transform: translate(-50%, -50%);
+	border-radius: 10vw;
+	background-color: rgb(45, 17, 172);
+	z-index: -1;
+	width: 17vw;
+	height: 5vw;
+}
+
 /* right part of dashboard */
 .right-rectangle {
 	position: fixed;
