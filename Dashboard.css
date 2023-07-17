@@ -1,94 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+	font-family: 'poppins', sans-serif;
+	background: #050d56;
+	margin: 0;
+	padding: 0;
+}
+/* left part of dashboard*/
+.logo {
+	position: absolute;
+	top: 1vh;
+	left: 1vh;
+	width: 8vh;
+	height: auto;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="Dashboard.css">
+.left-rectangle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 18vw;
+	height: 100%;
+	background: rgba(8, 78, 212, 0.2);
+	display: flex;
+	flex-direction: column;
+}
 
-</head>
+.left-rectangle .first-element {
+	margin-top: 10vh;
+}
 
-<body>
+.left-rectangle .first-group,
+.left-rectangle .second-group {
+	color: rgb(175, 175, 175);
+	font-size: 1.6vw;
+	font-weight: bold;
+	position: relative;
+	margin-left: 20%;
+	flex-shrink: 0;
+}
 
-    <div class="left-rectangle">
-        <img class="logo" src="logo.png" alt="Logo">
-        <a href="Dashboard.html" class="link first-group first-element">
-            <img src="Icons/Dashboard.png">
-            <span class="text">Dashboard</span>
-        </a>
-        <a href="#" class="link first-group">
-            <img src="Icons/Transfers.png">
-            <span class="text">Transfers</span>
-        </a>
-        <a href="#" class="link first-group">
-            <img src="Icons/Savings.png">
-            <span class="text">Savings</span>
-        </a>
-        <a href="#" class="link first-group">
-            <img src="Icons/History.png">
-            <span class="text">History</span>
-        </a>
-        <hr class="line">
-        <a href="#" class="link second-group">
-            <img src="Icons/Settings.png">
-            <span class="text">Settings</span>
-        </a>
-        <a href="#" class="link second-group">
-            <img src="Icons/ContactUs.png">
-            <span class="text">Contact us</span>
-        </a>
-    </div>
-    <div class="right-rectangle">
-        <div class="right-content">
-            <a href="#" class="right-links">
-                <img class="right-link" src="/Icons/Stats.png" alt="account link">
-            </a>
-            <a href="#" class="right-links">
-                <img class="right-link" src="/Icons/Alerts.png" alt="account link">
-            </a>
-            <a href="#" class="right-links">
-                <img class="right-link" src="/Icons/Account.png" alt="account link">
-            </a>
-        </div>
-        <div class="actions">
-            <div class="recent-actions">
-                <p>Recent Actions</p>
-                <a href="#"><img src="Icons/more.png" alt="show more"></a>
-            </div>
-            <div class="upcoming-actions">
-                <p>Upcoming Actions</p>
-                <a href="#"><img src="Icons/more.png" alt="show more"></a>
-            </div>
-        </div>
-    </div>
-    <div class="main-rectangle">
-        <div class="stats stat">
-            <img src="Icons/TotalAmount.png" alt="TotalAmount">
-            <p class="values">$$$$</p> <!-- for ASP edit-->
-            <p class="stat-text">Total Amount</p>
-        </div>
-        <div class="stats stat">
-            <img src="Icons/Spent.png" alt="TotalAmount">
-            <p class="values">$$$</p> <!-- for ASP edit-->
-            <p class="stat-text">Spent (Month)</p>
-        </div>
-        <div class="stats stat">
-            <img src="Icons/Left.png" alt="TotalAmount">
-            <p class="values">$$$</p> <!-- for ASP edit-->
-            <p class="stat-text">Left (Month)</p>
-        </div>
-        <div class="stats stat">
-            <img src="Icons/SavingGoal.png" alt="TotalAmount">
-            <p class="values">$$$</p> <!-- for ASP edit-->
-            <p class="stat-text">Saving Goal</p>
-        </div>
+.left-rectangle .first-group img,
+.left-rectangle .second-group img {
+	width: 3.5vw;
+	height: 3.5vw;
+	margin-bottom: 3vw;
+}
 
+.left-rectangle .first-group .text,
+.left-rectangle .second-group .text {
+	position: absolute;
+	top: 1.5vh;
+	margin-left: 1vh;
+}
 
+.left-rectangle .line {
+	width: 16vw;
+	height: 0.1vw;
+	margin-bottom: 5vw;
+}
+.left-rectangle .link:hover::before {
+	content: '';
+	position: absolute;
+	top: 2vw;
+	left: 6vw;
+	transform: translate(-50%, -50%);
+	border-radius: 10vw;
+	background-color: rgba(175, 175, 175, 0.3);
+	width: 17vw;
+	height: 5vw;
+	z-index: -1;
+}
 
-    </div>
+.actual-page::before {
+	content: '';
+	position: absolute;
+	top: 2vw;
+	left: 6vw;
+	transform: translate(-50%, -50%);
+	border-radius: 10vw;
+	background-color: rgba(175, 175, 175, 0.3);
+	z-index: -1;
+	width: 17vw;
+	height: 5vw;
+}
 
-    <script defer src="Dashboard.js"></script>
-</body>
+/* right part of dashboard */
+.right-rectangle {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 18vw;
+	height: 100%;
+	background: rgba(8, 78, 212, 0.2);
+}
 
-</html>
+.right-content {
+	display: flex;
+	justify-content: center;
+}
+
+.right-links {
+	width: 4vw;
+	height: 4vw;
+	border-radius: 50%;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 1vw;
+	margin-top: 2vw;
+}
+
+.right-links img {
+	width: 2.5vw;
+	height: 2.5vw;
+}
+
+.right-links:hover {
+	transform: scale(1.1);
+}
+
+.actions {
+	color: rgb(255, 255, 255);
+	font-size: 1.6vw;
+	font-weight: bold;
+	margin-top: 2vw;
+	margin-left: 1vw;
+}
+
+.actions img {
+	position: absolute;
+	width: 0.8vw;
+	height: auto;
+	right: 2vw;
+	margin-top: 1.5vw;
+}
+
+.recent-actions {
+	display: flex;
+	margin-bottom: 20vw;
+}
+.upcoming-actions {
+	display: flex;
+}
+
+/* main part of dashboard */
+
+.main-rectangle {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	justify-content: center;
+	margin-top: 10vw;
+}
+
+.stats {
+	display: flex;
+	width: 13vw;
+	height: 17vw;
+	flex-shrink: 0;
+	border-radius: 2vw;
+	background: rgba(0, 0, 0, 0.2);
+	margin-right: 1vw;
+	margin-left: 1vw;
+}
+.stat {
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.values {
+	position: absolute;
+	margin-left: 1.5vw;
+	margin-top: 9vw;
+	font-size: 2.5vw;
+	font-weight: bold;
+}
+.stat-text {
+	position: a;
+	font-size: small;
+	margin-top: 7.5vw;
+	font-size: 1.5vw;
+	margin-left: 1vw;
+}
+
+.stat img {
+	width: 5vw;
+	height: auto;
+	margin-left: 1.5vw;
+	margin-top: 2vw;
+}
