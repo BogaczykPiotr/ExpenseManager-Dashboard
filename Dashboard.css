@@ -96,8 +96,6 @@ body {
 .right-content {
 	display: flex;
 	justify-content: center;
-	height: 100%;
-	padding-top: 2vw;
 }
 
 .right-links {
@@ -109,9 +107,40 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin-left: 1.5vw;
+	margin-top: 2vh;
 }
 
 .right-links img {
 	width: 3vw;
 	height: 3vw;
+}
+
+.right-links:hover {
+	transform: scale(1.1);
+}
+
+.actions {
+	color: rgb(255, 255, 255);
+	font-size: 1.6vw;
+	font-weight: bold;
+	margin-top: 2vw;
+	margin-left: 1vw;
+}
+
+.actions img {
+	position: absolute;
+	width: 0.8vw;
+	height: auto;
+	right: 2vw;
+	margin-top: 1.5vw;
+
+}
+
+.recent-actions {
+	display: flex;
+	margin-bottom: 20vw;
+
+}
+.upcoming-actions {
+	display: flex;
 }
