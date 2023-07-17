@@ -144,3 +144,24 @@ body {
 .upcoming-actions {
 	display: flex;
 }
+
+/* main part of dashboard */
+
+.main-rectangle {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+	justify-content: center;
+	margin-top: 10vw;
+}
+
+.stats {
+    display: flex;
+    width: 10vw;
+    height: 13vw;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.20);
+    margin-right: 2vw;
+}
