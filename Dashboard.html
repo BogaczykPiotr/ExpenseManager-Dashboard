@@ -63,31 +63,34 @@
         </div>
     </div>
     <div class="main-rectangle">
-        <div class="stats stat">
+        <div class="stats">
             <img src="Icons/TotalAmount.png" alt="TotalAmount">
-            <p class="values">$$$$</p> <!-- for ASP edit-->
+            <p class="values">$$$</p> <!-- for ASP edit-->
             <p class="stat-text">Total Amount</p>
         </div>
-        <div class="stats stat">
+        <div class="stats">
             <img src="Icons/Spent.png" alt="TotalAmount">
             <p class="values">$$$</p> <!-- for ASP edit-->
             <p class="stat-text">Spent (Month)</p>
         </div>
-        <div class="stats stat">
+        <div class="stats">
             <img src="Icons/Left.png" alt="TotalAmount">
             <p class="values">$$$</p> <!-- for ASP edit-->
             <p class="stat-text">Left (Month)</p>
         </div>
-        <div class="stats stat">
+        <div class="stats">
             <img src="Icons/SavingGoal.png" alt="TotalAmount">
             <p class="values">$$$</p> <!-- for ASP edit-->
             <p class="stat-text">Saving Goal</p>
         </div>
-
+        <p class="actual-chart">Spent</p> <!-- for ASP edit-->
+        <div class="chart">
+            <canvas class="dashboard-chart"></canvas>
+        </div>
 
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer src="Dashboard.js"></script>
 </body>
 
