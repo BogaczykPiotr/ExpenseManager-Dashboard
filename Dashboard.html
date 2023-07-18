@@ -83,9 +83,21 @@
             <p class="values">$$$</p> <!-- for ASP edit-->
             <p class="stat-text">Saving Goal</p>
         </div>
-        <p class="actual-chart">Spent</p> <!-- for ASP edit-->
+        <select class="chart-selector"> <!-- for ASP edit-->
+            <option class="actual-chart total-amount-chart">Total Amount</option>
+            <option class="actual-chart spent-chart">Spent</option>
+            <option class="actual-chart left-chart">Left</option>
+            <option class="actual-chart saving-goal-chart">Saving Goal</option>
+        </select>
+        <select class="time-selector"> <!-- for ASP edit-->
+            <option class="one-day">1 day</option>
+            <option class="one-week">1 week</option>
+            <option class="one-month">1 month</option>
+            <option class="one-yeear">1 year</option>
+        </select>
+
         <div class="chart">
-            <canvas class="dashboard-chart"></canvas>
+            <canvas class="dashboard-chart"></canvas> <!--for ASP edit-->
         </div>
 
 
