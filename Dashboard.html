@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="Site.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="Site.js"></script>
 
 </head>
 
@@ -17,7 +19,7 @@
             <img src="Icons/Dashboard.png">
             <span class="text">Dashboard</span>
         </a>
-        <a href="#" class="link first-group">
+        <a href="Transfers.html" class="link first-group">
             <img src="Icons/Transfers.png">
             <span class="text">Transfers</span>
         </a>
@@ -54,10 +56,12 @@
         <div class="actions">
             <div class="recent-actions">
                 <p>Recent Actions</p>
+                <!--database query-->
                 <a href="#"><img src="Icons/more.png" alt="show more"></a>
             </div>
             <div class="upcoming-actions">
                 <p>Upcoming Actions</p>
+                <!--database query-->
                 <a href="#"><img src="Icons/more.png" alt="show more"></a>
             </div>
         </div>
@@ -99,11 +103,8 @@
         <div class="chart">
             <canvas class="dashboard-chart"></canvas> <!--for ASP edit-->
         </div>
-
-
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script defer src="Dashboard.js"></script>
+
 </body>
 
 </html>
