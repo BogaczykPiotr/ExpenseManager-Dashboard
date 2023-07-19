@@ -4,6 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 /* left part of dashboard*/
 .logo {
 	position: absolute;
@@ -22,6 +23,11 @@ body {
 	background: rgba(8, 78, 212, 0.2);
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
+}
+
+.left-rectangle::-webkit-scrollbar {
+	display: none;
 }
 
 .left-rectangle .first-element {
@@ -70,6 +76,7 @@ body {
 	z-index: -1;
 }
 
+
 .actual-page::before {
 	content: '';
 	position: absolute;
@@ -91,6 +98,11 @@ body {
 	width: 18vw;
 	height: 100%;
 	background: rgba(8, 78, 212, 0.2);
+	overflow-x: hidden;
+}
+
+.right-rectangle::-webkit-scrollbar {
+	display: none;
 }
 
 .right-content {
@@ -197,7 +209,7 @@ body {
 	position: absolute;
 	top: 25vw;
 	left: 21vw;
-	background-color:#050d56;
+	background-color: #050d56;
 	border: none;
 	color: white;
 	opacity: 0.8;
@@ -208,7 +220,7 @@ body {
 	position: absolute;
 	top: 25vw;
 	right: 21vw;
-	background-color:#050d56;
+	background-color: #050d56;
 	border: none;
 	color: white;
 	opacity: 0.8;
@@ -219,3 +231,4 @@ body {
 	width: 40vw;
 	max-height: 20vw;
 }
+
