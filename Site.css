@@ -321,25 +321,26 @@ body {
 
 .savings-main-rectangle {
 	display: flex;
-	width: 100%;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
-	margin-top: 6.5vw;
 }
 .savings-saving-goal {
 	display: flex;
+	position: relative;
 	justify-content: center;
-	align-items: center;
 	color: rgba(255, 255, 255, 0.7);
 	font-weight: bolder;
 	font-size: 4vw;
 	width: 100%;
+
 }
 
 .add-remove-saving-goal {
 	display: flex;
 	align-items: center;
+	color: rgba(255, 255, 255, 0.8);
+	gap: 1vw;
+
 }
 
 .saving-goal-value {
@@ -351,4 +352,5 @@ body {
 	width: 4.5vw;
 	height: auto;
 	cursor: pointer;
+	filter: invert(0.8);
 }
