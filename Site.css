@@ -308,13 +308,47 @@ body {
 	color: rgb(255, 255, 255, 0.8);
 }
 .transfers-time-selector {
-		color: rgb(175, 175, 175);
-		font-size: 1.6vw;
-		position: absolute;
-		top: 8vw;
-		left: 21.5vw;
-		background-color: #050d56;
-		border: none;
-		color: white;
-		opacity: 0.8;
+	color: rgb(175, 175, 175);
+	font-size: 1.6vw;
+	position: absolute;
+	top: 8vw;
+	left: 21.5vw;
+	background-color: #050d56;
+	border: none;
+	color: white;
+	opacity: 0.8;
+}
+
+.savings-main-rectangle {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 6.5vw;
+}
+.savings-saving-goal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(255, 255, 255, 0.7);
+	font-weight: bolder;
+	font-size: 4vw;
+	width: 100%;
+}
+
+.add-remove-saving-goal {
+	display: flex;
+	align-items: center;
+}
+
+.saving-goal-value {
+	font-size: 5vw;
+}
+
+.add-goal,
+.remove-goal {
+	width: 4.5vw;
+	height: auto;
+	cursor: pointer;
 }
