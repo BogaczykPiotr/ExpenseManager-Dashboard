@@ -7,6 +7,7 @@ for (let i = 0; i < links.length; i++) {
 		console.log(i)
 	}
 }
+
 if (window.location.pathname === '/Dashboard.html') {
 	let canvas = document.querySelector('.dashboard-chart')
 
@@ -116,5 +117,24 @@ if (window.location.pathname === '/Dashboard.html') {
 			}
 		}
 		chart.update()
+	})
+}
+
+if (window.location.pathname === '/Savings.html') {
+	let value = document.querySelector('.saving-goal-value')
+	let plus = document.querySelector('.add-goal')
+	let minus = document.querySelector('.remove-goal')
+
+	plus.addEventListener('click', function () {
+		let currentValue = parseInt(value.textContent)
+		let newValue = currentValue + 50
+		value.textContent = newValue
+	})
+	minus.addEventListener('click', function () {
+		let currentValue = parseInt(value.textContent)
+		let newValue = currentValue - 50
+		if (newValue > 0) {
+			value.textContent = newValue
+		}
 	})
 }
