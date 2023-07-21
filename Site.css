@@ -321,30 +321,23 @@ body {
 
 .savings-main-rectangle {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1vw;
 }
+
 .savings-saving-goal {
-	display: flex;
-	position: relative;
-	justify-content: center;
+	font-size: 4vw;
 	color: rgba(255, 255, 255, 0.7);
 	font-weight: bolder;
-	font-size: 4vw;
-	width: 100%;
-
+	margin-bottom: 1vw;
 }
 
 .add-remove-saving-goal {
 	display: flex;
 	align-items: center;
 	color: rgba(255, 255, 255, 0.8);
-	gap: 1vw;
-
-}
-
-.saving-goal-value {
-	font-size: 5vw;
+	margin-top: -2%;
 }
 
 .add-goal,
@@ -353,4 +346,97 @@ body {
 	height: auto;
 	cursor: pointer;
 	filter: invert(0.8);
+}
+
+.saving-goal-value {
+	font-size: 6vw;
+	line-height: 0;
+	padding: 0.7vw 1vw;
+}
+
+.confirm-saving-goal {
+	font-size: 2vw;
+	background-color: #050d70;
+	color: #fff;
+	padding: 0.7vw 1vw;
+	border-radius: 10vw;
+	border: none;
+	cursor: pointer;
+	margin-top: -2%;
+	margin-left: 1%;
+}
+
+.confirm-saving-goal:hover {
+	background-color: #0056b3;
+}
+
+.confirm-saving-goal:active {
+	background-color: #003366;
+	padding: 0.5vw 1vw;
+}
+/* if complete */
+.completed {
+	display: flex;
+	width: 13vw;
+	height: 15vw;
+	flex-shrink: 0;
+	border-radius: 2vw;
+	background: rgba(92, 250, 0, 0.5);
+	color: white;
+	flex-direction: column;
+	margin-right: 40%;
+}
+.summary {
+	margin-top: 10%;
+}
+/* else */
+.failed {
+	display: flex;
+	width: 13vw;
+	height: 15vw;
+	flex-shrink: 0;
+	border-radius: 2vw;
+	background: rgba(248, 30, 1, 0.5);
+	color: white;
+	flex-direction: column;
+	margin-right: 40%;
+}
+.summary span {
+	display: flex;
+	justify-content: center;
+	font-size: 1.2vw;
+	margin-top: 10%;
+}
+/* temporary class*/
+.monthly-goal {
+	display: flex;
+	justify-content: center;
+	font-size: 1.2vw;
+	line-height: 0;
+	margin-top: 30%;
+}
+.last-goal {
+	display: flex;
+	justify-content: center;
+	font-size: 2vw;
+	line-height: 0;
+}
+.progress-chart-container {
+	position: absolute;
+	width: 20vw;
+	height: auto;
+	top: 60%;
+	right: 25%;
+	background-color: rgba(6, 61, 116, 0.4);
+	border-radius: 2vw;
+	padding: 1vw;
+}
+.progress-chart-container:hover {
+	transform: scale(1.1);
+}
+.progress-text {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-size: 2vw;
 }
