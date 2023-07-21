@@ -153,10 +153,10 @@ if (window.location.pathname === '/Savings.html') {
 	}
 
 	let data = {
-		labels: ['0', '4', '8', '12', '16', '20', '24'],
+		labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july', 'aug', 'sep', 'oct', 'nov', 'dec'],
 		datasets: [
 			{
-				data: [12, 19, 3, 5, 2, 3, 12, 3, 14, 5, 6, 12],
+				data: [100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650],
 				borderColor: 'rgba(255, 140, 0, 1)',
 				borderWidth: 3,
 			},
