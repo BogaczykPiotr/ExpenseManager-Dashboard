@@ -4,7 +4,6 @@ for (let i = 0; i < links.length; i++) {
 	if (links[i].href === window.location.href) {
 		links[i].classList.add('actual-page')
 		links[i].classList.remove('link')
-		console.log(i)
 	}
 }
 
@@ -121,9 +120,14 @@ if (window.location.pathname === '/Dashboard.html') {
 }
 
 if (window.location.pathname === '/Savings.html') {
+	let canvas = document.querySelector('.progress-chart')
+
 	let value = document.querySelector('.saving-goal-value')
 	let plus = document.querySelector('.add-goal')
 	let minus = document.querySelector('.remove-goal')
+	let summary = document.querySelector('.summary')
+	let lastGoal = document.querySelector('.last-goal')
+	let goalText = document.querySelector('.goal-text')
 
 	plus.addEventListener('click', function () {
 		let currentValue = parseInt(value.textContent)
@@ -136,5 +140,45 @@ if (window.location.pathname === '/Savings.html') {
 		if (newValue > 0) {
 			value.textContent = newValue
 		}
+	})
+	if (parseInt(lastGoal.textContent) < 300) {
+		// for ASP edit
+		summary.classList.add('failed')
+		summary.classList.remove('completed')
+		goalText.innerText = 'Try in next month'
+	} else {
+		summary.classList.add('completed')
+		summary.classList.remove('failed')
+		goalText.innerText = 'Congratulations'
+	}
+
+	let data = {
+		labels: ['0', '4', '8', '12', '16', '20', '24'],
+		datasets: [
+			{
+				data: [12, 19, 3, 5, 2, 3, 12, 3, 14, 5, 6, 12],
+				borderColor: 'rgba(255, 140, 0, 1)',
+				borderWidth: 3,
+			},
+		],
+	}
+
+	let options = {
+		scales: {
+			y: {
+				beginAtZero: true,
+			},
+		},
+		plugins: {
+			legend: {
+				display: false,
+			},
+		},
+	}
+
+	let progressChart = new Chart(canvas, {
+		type: 'line',
+		data: data,
+		options: options,
 	})
 }
