@@ -7,6 +7,8 @@
     <title>Transfers</title>
     <link rel="stylesheet" href="Site.css">
     <script defer src="Site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
 
 </head>
 
@@ -72,7 +74,18 @@
             <p class="saving-goal-value">100</p> <!--for ASP edit-->
             <img class="add-goal" src="Icons/plus.png" alt="increase saving goal">
         </div>
+        <button class="confirm-saving-goal">Confirm</button>
+        <div class="failed summary">
+            <p class="monthly-goal ">Your Last Monthly Goal</p> <!--for ASP edit-->
+            <p class="last-goal ">300</p>
+            <span class="goal-text"></span>
+        </div>
+        <div class="progress-chart-container">
+            <p class="progress-text">Your Progress</p>
+            <canvas class="progress-chart"></canvas>
+        </div>
 
     </div>
+
 
 </body>
