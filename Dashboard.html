@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Transfers</title>
     <link rel="stylesheet" href="Site.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <script defer src="Site.js"></script>
 
 </head>
 
 <body>
-
     <div class="left-rectangle">
         <img class="logo" src="logo.png" alt="Logo">
         <a href="Dashboard.html" class="link first-group first-element">
@@ -41,6 +39,7 @@
             <span class="text">Contact us</span>
         </a>
     </div>
+
     <div class="right-rectangle">
         <div class="right-content">
             <a href="#" class="right-links">
@@ -66,45 +65,42 @@
             </div>
         </div>
     </div>
-    <div class="main-rectangle">
-        <div class="stats">
-            <img src="Icons/TotalAmount.png" alt="TotalAmount">
-            <p class="values">$$$</p> <!-- for ASP edit-->
-            <p class="stat-text">Total Amount</p>
+    <a href="history.html" class="transfers-history">Show All Transfers</a>
+    <a class="create-transfer" href="#">New Transfer</a> <!--for ASP edit-->
+    <p class="last-transfers">Last Transfers</p>
+    <div class="main-rectangle-transfers">
+        <div class="transfers-list"> <!--for ASP edit-->
+            <h1 class="transfers-money">$$$</h1>
+            <p class="transfers-category">Home</p>
+            <p class="transfers-date">Date</p>
+            <a href="#" class="show-details">
+                <span>Details</span>
+            </a>
         </div>
-        <div class="stats">
-            <img src="Icons/Spent.png" alt="TotalAmount">
-            <p class="values">$$$</p> <!-- for ASP edit-->
-            <p class="stat-text">Spent (Month)</p>
+        <div class="transfers-list"> <!--for ASP edit-->
+            <h1 class="transfers-money">$$$</h1>
+            <p class="transfers-category">Home</p>
+            <p class="transfers-date">Date</p>
+            <a href="#" class="show-details">
+                <span>Details</span>
+            </a>
         </div>
-        <div class="stats">
-            <img src="Icons/Left.png" alt="TotalAmount">
-            <p class="values">$$$</p> <!-- for ASP edit-->
-            <p class="stat-text">Left (Month)</p>
+        <div class="transfers-list"> <!--for ASP edit-->
+            <h1 class="transfers-money">$$$</h1>
+            <p class="transfers-category">Home</p>
+            <p class="transfers-date">Date</p>
+            <a href="#" class="show-details">
+                <span>Details</span>
+            </a>
         </div>
-        <div class="stats">
-            <img src="Icons/SavingGoal.png" alt="TotalAmount">
-            <p class="values">$$$</p> <!-- for ASP edit-->
-            <p class="stat-text">Saving Goal</p>
-        </div>
-        <select class="chart-selector"> <!-- for ASP edit-->
-            <option class="actual-chart total-amount-chart">Total Amount</option>
-            <option class="actual-chart spent-chart">Spent</option>
-            <option class="actual-chart left-chart">Left</option>
-            <option class="actual-chart saving-goal-chart">Saving Goal</option>
-        </select>
-        <select class="time-selector"> <!-- for ASP edit-->
-            <option class="one-day">1 day</option>
-            <option class="one-week">1 week</option>
-            <option class="one-month">1 month</option>
-            <option class="one-yeear">1 year</option>
-        </select>
-
-        <div class="chart">
-            <canvas class="dashboard-chart"></canvas> <!--for ASP edit-->
+        <div class="transfers-list"> <!--for ASP edit-->
+            <h1 class="transfers-money">$$$</h1>
+            <p class="transfers-category">Home</p>
+            <p class="transfers-date">Date</p>
+            <a href="#" class="show-details">
+                <span>Details</span>
+            </a>
         </div>
     </div>
 
 </body>
-
-</html>
