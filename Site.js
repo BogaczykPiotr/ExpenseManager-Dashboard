@@ -128,15 +128,15 @@ if (window.location.pathname === '/Savings.html') {
 	let summary = document.querySelector('.summary')
 	let lastGoal = document.querySelector('.last-goal')
 	let goalText = document.querySelector('.goal-text')
-
+	let newValue;
 	plus.addEventListener('click', function () {
 		let currentValue = parseInt(value.textContent)
-		let newValue = currentValue + 50
+		newValue = currentValue + 50
 		value.textContent = newValue
 	})
 	minus.addEventListener('click', function () {
 		let currentValue = parseInt(value.textContent)
-		let newValue = currentValue - 50
+		newValue = currentValue - 50
 		if (newValue > 0) {
 			value.textContent = newValue
 		}
@@ -157,7 +157,7 @@ if (window.location.pathname === '/Savings.html') {
 		datasets: [
 			{
 				data: [100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650],
-				borderColor: 'rgba(255, 140, 0, 1)',
+				borderColor: 'rgba(255, 255, 0, 1)',
 				borderWidth: 3,
 			},
 		],
