@@ -12,15 +12,6 @@ if (window.location.pathname === '/Dashboard.html') {
 
 	let chartSelector = document.querySelector('.chart-selector')
 	let timeSelector = document.querySelector('.time-selector')
-	let totalAmountChart = document.querySelector('.total-amount-chart')
-	let spentChart = document.querySelector('.spent-chart')
-	let leftChart = document.querySelector('.left-chart')
-
-	let savingGoalChart = document.querySelector('.saving-goal-chart')
-	let oneDay = document.querySelector('.one-day')
-	let oneWeek = document.querySelector('.one-week')
-	let oneMont = document.querySelector('.one-month')
-	let oneYear = document.querySelector('.one-year')
 
 	let data = {
 		labels: ['0', '4', '8', '12', '16', '20', '24'],
@@ -107,13 +98,14 @@ if (window.location.pathname === '/Dashboard.html') {
 		} else if (timeSelector.value === '1 year') {
 			data.labels = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 		}
-
 		if (data.labels.length > data.datasets[0].data.length) {
 			let dataLabelsLength = data.labels.length
 			let dataLength = data.datasets[0].data.length
 			for (let i = dataLength; i < dataLabelsLength; i++) {
 				data.datasets[0].data.push(0)
+				
 			}
+			
 		}
 		chart.update()
 	})
@@ -128,7 +120,7 @@ if (window.location.pathname === '/Savings.html') {
 	let summary = document.querySelector('.summary')
 	let lastGoal = document.querySelector('.last-goal')
 	let goalText = document.querySelector('.goal-text')
-	let newValue;
+	let newValue
 	plus.addEventListener('click', function () {
 		let currentValue = parseInt(value.textContent)
 		newValue = currentValue + 50
