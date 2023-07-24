@@ -54,8 +54,8 @@ body {
 .left-rectangle .first-group .text,
 .left-rectangle .second-group .text {
 	position: absolute;
-	top: 1.5vh;
-	margin-left: 1vh;
+	top: 1vh;
+	margin-left: 1vw;
 }
 
 .left-rectangle .line {
@@ -63,30 +63,33 @@ body {
 	height: 0.1vw;
 	margin-bottom: 5vw;
 }
-.left-rectangle .link:hover::before {
+.link {
+	position: relative;
+}
+
+.link:hover::before {
 	content: '';
 	position: absolute;
-	top: 1.7vw;
-	left: 5.5vw;
-	transform: translate(-50%, -50%);
-	border-radius: 10vw;
-	background-color: rgba(175, 175, 175, 0.3);
-	width: 17vw;
-	height: 5vw;
+	top: -1vw;
+	left: -0.5vw;
+	width: 16vw;
+	height: 6vw;
+	background-color: rgba(175, 175, 175, 0.4);
+	border-radius: 2vw;
 	z-index: -1;
-}
+  }
+
 
 .actual-page::before {
 	content: '';
 	position: absolute;
-	top: 2vw;
-	left: 5.5vw;
-	transform: translate(-50%, -50%);
-	border-radius: 10vw;
-	background-color: rgba(175, 175, 175, 0.3);
+	top: -1vw;
+	left: -0.5vw;
+	width: 16vw;
+	height: 6vw;
+	background-color: rgba(175, 175, 175, 0.4);
+	border-radius: 2vw;
 	z-index: -1;
-	width: 17vw;
-	height: 5vw;
 }
 
 /* right part of dashboard */
@@ -498,7 +501,7 @@ body {
 /* achievements */
 .main-rectangle-achievements {
 	display: grid;
-	grid-template-columns: repeat(3, 0fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 3vw;
 	margin-top: 6.5vw;
 	position: absolute;
@@ -512,8 +515,8 @@ body {
 	font-size: 2vw;
 	font-weight: bold;
 	display: flex;
-	justify-content: center;
 	margin-top: 5vw;
+	justify-content: center;
 }
 
 .locked-badges {
@@ -523,11 +526,13 @@ body {
 	margin-left: 25%;
 	margin-top: 5vw;
 	grid-column: 2;
+	display: flex;
+	justify-content: center;
 }
 
 .badge {
 	padding: 2vw;
-	background-color: rgba(170, 243, 0, 0.589);
+	background-color: rgba(170, 243, 0, 0.4);
 	text-decoration: none;
 	border-radius: 50%;
 	width: 10vw;
@@ -541,7 +546,7 @@ body {
 
 .badge.locked {
 	padding: 2vw;
-	background-color: rgba(255, 0, 0, 0.589);
+	background-color: rgba(92, 79, 79, 0.4);
 	text-decoration: none;
 	border-radius: 50%;
 	width: 10vw;
